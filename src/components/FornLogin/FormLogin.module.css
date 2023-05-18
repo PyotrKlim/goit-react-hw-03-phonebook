@@ -1,0 +1,8 @@
+.Phonebook {
+  margin: 10px;
+}
+
+form {
+  display: inline-grid;
+  justify-items: start;
+}
