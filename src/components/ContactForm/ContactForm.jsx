@@ -1,10 +1,15 @@
 import { Component } from 'react';
-import css from './FormLogin.module.css';
-import { nanoid } from 'nanoid';
-class FormLogin extends Component {
+import css from './ContactForm.module.css';
+import PropTypes from 'prop-types';
+
+class ContactForm extends Component {
   state = {
     name: '',
     number: '',
+  };
+
+  static propTypes = {
+    onSubmit: PropTypes.func.isRequired,
   };
 
   handleChange = e => {
@@ -13,10 +18,8 @@ class FormLogin extends Component {
   };
 
   handSubmit = e => {
-    // console.log(this.stata.id);
     e.preventDefault();
-    // console.log(this.state);
-    // props = > formSubmitHandler
+
     this.props.onSubmit(this.state);
     this.reset();
   };
@@ -57,4 +60,4 @@ class FormLogin extends Component {
   }
 }
 
-export default FormLogin;
+export default ContactForm;
