@@ -3,7 +3,7 @@ import css from './FilterContacts.module.css';
 
 const FilterContacts = ({ onChange, value }) => {
   return (
-    <div>
+    <div className={css.FilterContacts}>
       <h2>Contacts</h2>
       <p>Find contacts by name</p>
       <input type="text" onChange={onChange} value={value} />
