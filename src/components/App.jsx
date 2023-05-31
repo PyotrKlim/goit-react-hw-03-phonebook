@@ -59,6 +59,7 @@ export class App extends Component {
   render() {
     const { contacts, filter } = this.state;
     const filteredContacts = this.getFilteredContacts();
+
     return (
       <>
         <ContactForm onSubmit={this.formSubmitHandler} />
